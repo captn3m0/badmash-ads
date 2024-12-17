@@ -1,0 +1,72 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    {% unless page.title %}
+    <title>{{site.title}}</title>
+    {% else %}
+    <title>{{page.title}} | {{site.title}}</title>
+    {% endunless %}
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css" />
+    <style>
+      img.icon {
+        width: 1.5em;
+        height: 1.5em;
+        display: inline;
+        margin: 0;
+      }
+      a.badge:hover{
+        text-decoration: none;
+        border-bottom: 0px;
+      }
+      .badge img, dt img{
+        margin-bottom: 0;
+      } 
+      .callout {
+        border: 1px dashed dimgrey;
+        padding: 5px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <article>
+          <header>
+            <h1>
+            <img class=icon src="/icon.png">{{site.title}}</h1>
+          </header>
+          <a class=badge href="https://github.com/openjustice-in/">
+          <img alt="GitHub Badge" src="https://img.shields.io/badge/github-organization-green"></a>
+          <a class=badge href="https://groups.io/g/open-justice-in">
+          <img alt="Mailing List Badge" src="https://img.shields.io/badge/Mailing_List-join-blue"></a>
+          <a class=badge href="https://pypi.org/project/ecourts/">
+          <img alt="PyPi Badge for ecourts" src="https://img.shields.io/pypi/v/ecourts"></a>
+          <a class=badge href="https://us04web.zoom.us/j/78661087621?pwd=a6CcrQtZ8wodmC8fwVHoN1DGStyQRW.1">
+          <!-- <img alt="Zoom Link for Community Call" src="https://img.shields.io/badge/Community_Call-attend-green"></a> -->
+
+          <a class=badge href="https://signal.group/#CjQKIEaLkrWjm34HWkq4gCVAWRppAIYvJhszY1Q4u0OkYwl1EhC67Bthvx4F23rmTEzFPhdF">
+          <img alt="Signal Group" src="https://img.shields.io/badge/Signal_Group-join-purple"></a>
+          
+
+          <h2>{{page.title}}</h2>
+          {{content}}
+
+        </article>
+      </section>
+      <hr>
+    </main>
+    <footer>
+      <p>Project by
+        <a href="https://captnemo.in">Nemo</a>.
+        <a href="https://github.com/openjustice-in/openjustice-in.github.io">Website Source</a> on GitHub.
+        <a href="https://oxal.org/projects/sakura/">Sakura</a> theme by Mitesh.
+      </p>
+    </footer>
+  </body>
+</html>
